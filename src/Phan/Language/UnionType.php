@@ -856,6 +856,7 @@ class UnionType implements \Serializable
      * type.
      *
      * @return \Generator
+     * @psalm-return \Generator<Clazz>
      *
      * A list of classes representing the non-native types
      * associated with this UnionType
