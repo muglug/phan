@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<psalm
+    name="Example Psalm config with recommended defaults"
+    stopOnFirstError="false"
+    useDocblockTypes="true"
+    useAssertForType="true"
+    autoloader="src/Phan/Bootstrap.php"
+>
+    <projectFiles>
+        <directory name="src" />
+        <ignoreFiles>
+            <file name="src/requirements.php" />
+            <directory name="src/Phan/Language/Internal" />
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <MissingClosureReturnType errorLevel="suppress" />
+        <MissingConstructor errorLevel="suppress" />
+        <MissingReturnType errorLevel="suppress" />
+
+        <InvalidDocblock errorLevel="info" />
+        <DeprecatedMethod errorLevel="info" />
+
+        <PossiblyUndefinedVariable errorLevel="info" />
+        <PossiblyNullArgument errorLevel="info" />
+        <PossiblyNullReference errorLevel="info" />
+        <PossiblyNullOperand errorLevel="info" />
+        <PossiblyUnusedVariable errorLevel="info" />
+
+        <PropertyNotSetInConstructor errorLevel="info" />
+        <MoreSpecificReturnType errorLevel="info" />
+        <TypeCoercion errorLevel="info" />
+        <InvalidToString>
+            <errorLevel type="info">
+                <directory name="src/Phan/Language/Type" />
+            </errorLevel>
+        </InvalidToString>
+    </issueHandlers>
+</psalm>
